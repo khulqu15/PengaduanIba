@@ -1,0 +1,121 @@
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100vh;
+}
+.nav-link{
+    color: #000 !important;
+}
+.nav-item{
+    margin-left: 20px;
+}
+.navbar-nav{
+    margin-left: 900px;
+}
+.login{
+    text-align: center;
+    width: 80px;
+    border-radius: 5px;
+}
+@font-face {
+    font-family: 'Luna';
+    src: url(../fonts/Luna.woff);
+}
+.title{
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: bold;
+    font-size: 55px;
+    color: #000;
+    line-height: 120%;
+}
+.subtitle{
+    padding-top: 10px;
+    padding-left: 50px;
+    font-size: 20px;
+    line-height: 160%;
+    color: #000;
+}
+.mulai{
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.btnmulai{
+    width: 120px;
+}
+.judul{
+    padding-top: 10px;
+    font-size: 27px;
+    line-height: 160%;
+    color: #000;
+    font-family: 'Luna';
+}
+.judul2{
+    padding-top: 10px;
+    font-size: 27px;
+    line-height: 160%;
+    color: #000;
+    font-family: 'Luna';
+    text-align: right;
+
+}
+.judul3{
+    padding-top: 10px;
+    font-size: 27px;
+    line-height: 160%;
+    color: #000;
+    font-family: 'Luna';
+    text-align: left;
+}
+.decoration{
+    width: 550px;
+    height: 800px;
+    padding-left: 80px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #ffffb3;
+}
+.decoration2{
+    background-color: #ffffb3;
+    box-shadow: 3px 3px 3px rgba(0.2, 0.2, 0.2, 0.2); 
+    border: none; 
+    border-radius: 30px;
+    align-self: center;
+}
+.line{
+    width: 200px;
+    height: 3px;
+    background-color: #ff8080;
+}
+.line1{
+    width: 300px;
+    height: 4px;
+    background-color: #ff8080;
+}
+.line2{
+    width: 400px;
+    height: 5px;
+    background-color: #ff8080;
+}
+.bounce {
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-100px); }
+    100% { transform: translateY(0); }
+}
+.ftr{
+    background-color: #ffde28;
+    padding-top: 15px;;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+}
