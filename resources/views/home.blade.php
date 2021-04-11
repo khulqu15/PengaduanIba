@@ -18,7 +18,7 @@
                                 @csrf
                                 <div class="form-group cols-sm-6">
                                     <label>NIK</label>
-                                    <input type="text" name="nik" value="" class="form-control">
+                                    <input readonly disabled value="{{ Auth::user()->nik }}" type="text" name="nik" value="" class="form-control">
                                 </div>
                                 <div class="form-group cols-sm-6">
                                     <label>Tulis Laporan</label>

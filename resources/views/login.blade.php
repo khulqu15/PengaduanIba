@@ -17,10 +17,47 @@
 
   <!-- Custom styles for this template-->
   <link href="{{url('css/sb-admin-2.min.css')}}" rel="stylesheet">
-
+  <style>
+    .alert.alert-danger {
+      background-color: rgb(223, 55, 55);
+      border-radius: 16px;
+      position: fixed;
+      width: 80%;
+      left: 10%;
+      border: none;
+      top: 10%;
+      z-index: 100;
+      padding: 1rem;
+      color: white;
+    }
+    .alert.alert-success {
+      background-color: rgb(29, 187, 113);
+      border-radius: 16px;
+      position: fixed;
+      width: 80%;
+      left: 10%;
+      border: none;
+      top: 10%;
+      z-index: 100;
+      padding: 1rem;
+      color: white;
+    }
+  </style>
 </head>
 
 <body style="background-color: #ffffb3">
+
+  @if(Session::has('error'))
+    <div class="alert alert-danger">
+      <span>{{ Session::get('error') }}</span>
+    </div>
+  @endif
+
+  @if(Session::has('success'))
+    <div class="alert alert-success">
+      <span>{{ Session::get('success') }}</span>
+    </div>
+  @endif
 
   <div class="container">
 

@@ -10,13 +10,13 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $user = User::create($request->except('_method', '_token'));
-        return redirect()->back();
+        return redirect()->route('index.petugas');
     }
 
     public function update(Request $request, $id)
     {
         $user = User::where('id', $id)->update($request->except('_method', '_token'));
-        return redirect()->back();
+        return redirect()->route('index.petugas');
     }
 
     public function destroy($id)

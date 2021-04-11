@@ -19,12 +19,13 @@ class AuthController extends Controller
             $user->email = $request->email;
             $user->password = $request->password;
             $user->phone = $request->phone;
+            $user->nik = $request->nik;
             $user->level = 'user';
             $user->api_token = Str::random(10);
             $user->save();
-            return redirect()->route('login');
+            return redirect()->route('login')->with('success', 'Daftar Sukses');
         } catch (\Exception $e) {
-            return redirect()->back();
+            return redirect()->back()->with('error', json_encode($e->getMessage()));
         }
     }
 
@@ -36,9 +37,9 @@ class AuthController extends Controller
                 $user = User::with('Response')->where('id', $auth->id)->first();
                 return redirect()->route('dashboard.admin');
             }
-            return redirect()->back();
+            return redirect()->back()->with('error', 'Email atau Password Salah');
         } catch (\Exception $e) {
-            return redirect()->back();
+            return redirect()->back()->with('error', json_encode($e->getMessage()));;
         }
     }
 
