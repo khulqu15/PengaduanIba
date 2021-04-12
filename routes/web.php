@@ -64,7 +64,7 @@ Route::middleware('admin')->group(function() {
     Route::get('system/cetak_pengaduan', [PagesController::class,'cetak_pengaduan']);
     Route::get('system/delete_pengaduan/{id}', [ComplaintController::class,'destroy'])->name('delete.complaint');
 
-    Route::get('system/lihat_tanggapan', [PagesController::class,'lihat_tanggapan_admin']);
+    Route::get('system/lihat_tanggapan', [PagesController::class,'lihat_tanggapan_admin'])->name('lihat.response');
     Route::get('system/edit_tanggapan/{id}', [PagesController::class,'edit_tanggapan'])->name('edit.response');
     Route::get('system/preview_tanggapan', [PagesController::class,'preview_tanggapan']);
     Route::get('system/cetak_tanggapan', [PagesController::class,'cetak_tanggapan']);

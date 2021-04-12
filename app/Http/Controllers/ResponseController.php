@@ -68,7 +68,7 @@ class ResponseController extends Controller
         try {
             $update = $this->res->where('id', $id)->update($request->except('_method', '_token', 'tgl'));
             $response = $this->res->find($id);
-            return redirect()->back();
+            return redirect()->route('lihat.response');
         } catch (\Exception $e) {
             return $this->onError($e);
         }

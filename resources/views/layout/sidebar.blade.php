@@ -80,10 +80,12 @@
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
+      @if (Auth::user()->level == 'Admin')
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
           <i class="fas fa-fw fa-print"></i>
           <span>Laporan</span>
+          {{ Auth::user()->level }}
         </a>
         <div id="collapseThree" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
@@ -95,6 +97,7 @@
           </div>
         </div>
       </li>
+      @endif
 
       <!-- Divider -->
       <hr class="sidebar-divider d-none d-md-block">
